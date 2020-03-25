@@ -33,28 +33,28 @@ class FlutterNativeImage {
   /// Gets the properties of an image
   ///
   /// Gets the properties of an image given the [fileName].
-  static Future<ImageProperties> getImageProperties(String fileName) async {
+  static Future<String> getImageProperties(String fileName) async {
     ImageOrientation decodeOrientation(int orientation) {
       // For details, see: https://developer.android.com/reference/android/media/ExifInterface
       switch (orientation) {
         case 1:
-          return ImageOrientation.normal;
+          return "normal";
         case 2:
-          return ImageOrientation.flipHorizontal;
+          return "flipHorizontal";
         case 3:
-          return ImageOrientation.rotate180;
+          return "rotate180";
         case 4:
-          return ImageOrientation.flipVertical;
+          return "flipVertical";
         case 5:
-          return ImageOrientation.transpose;
+          return "transpose";
         case 6:
-          return ImageOrientation.rotate90;
+          return "rotate90";
         case 7:
-          return ImageOrientation.transverse;
+          return "transverse";
         case 8:
-          return ImageOrientation.rotate270;
+          return "rotate270";
         default:
-          return ImageOrientation.undefined;
+          return "undefined";
       }
     }
 
