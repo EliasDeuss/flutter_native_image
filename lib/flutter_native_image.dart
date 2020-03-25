@@ -38,23 +38,23 @@ class FlutterNativeImage {
       // For details, see: https://developer.android.com/reference/android/media/ExifInterface
       switch (orientation) {
         case 1:
-          return "normal";
+          return ImageOrientation.normal;
         case 2:
-          return "flipHorizontal";
+          return ImageOrientation.flipHorizontal;
         case 3:
-          return "rotate180";
+          return ImageOrientation.rotate180;
         case 4:
-          return "flipVertical";
+          return ImageOrientation.flipVertical;
         case 5:
-          return "transpose";
+          return ImageOrientation.transpose;
         case 6:
-          return "rotate90";
+          return ImageOrientation.rotate90;
         case 7:
-          return "transverse";
+          return ImageOrientation.transverse;
         case 8:
-          return "rotate270";
+          return ImageOrientation.rotate270;
         default:
-          return "undefined";
+          return ImageOrientation.undefined;
       }
     }
 
